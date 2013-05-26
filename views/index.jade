@@ -1,5 +1,13 @@
 extends layout
 
+
 block content
-  h1= title
-  p Welcome to #{title}
+	section.container
+		h1.header Flora
+		section.image(style="text-align:center")
+			img(src="/images/tiger.jpg", height="500px", width="500px")
+		section.tools(style="text-align:center")
+			h5 crop
+			h5 zoom
+			h5 grayscale
+			h5 contrast
