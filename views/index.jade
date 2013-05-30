@@ -3,11 +3,55 @@ extends layout
 
 block content
 	section.container
-		h1.header Flora
-		section.image(style="text-align:center")
-			img(src="/images/tiger.jpg", height="500px", width="500px")
-		section.tools(style="text-align:center")
-			h5 crop
-			h5 zoom
-			h5 grayscale
-			h5 contrast
+		section.row
+			h1(style="font-family: 'Monoton', cursive;; font-size:94px; margin-bottom:30px").head flora
+			section.span3
+				div.filters(data-filter='jayz')
+					h1 Jay-Z
+					img(src="/filters/jayz.jpg")
+				div.filters(data-filter='gamma')
+					h1 Gamma
+					img(src="/filters/gamma.jpg")
+				div.filters(data-filter='blueivy')
+					h1 Blue Ivy
+					img(src="/filters/blueivy.jpg")
+				div.filters(data-filter='contrast')
+					h1 Contrast
+					img(src="/filters/contrast.jpg")
+				div.filters(data-filter='mirror')
+					h1 Mirror
+					img(src="/filters/mirror.jpg")
+			section.span9
+				div.image
+					div.img-holder
+						img#image(src="http://placehold.it/650x450")
+				div.transformation
+					input#file(type="file")
+					section.btn-group
+						button#crop(type='button').btn.btn-info
+						br
+							i.icon-resize-full
+							span &nbsp;Crop
+					
+
+//
+		section.image(style="padding:20px; text-align:center; background:#f0f0f0")
+			img#image(src="/images/tiger.jpg", height="700px", width="700px")
+		section.tools(style="padding:0px 120px")
+			
+	section.container(style="padding:20px 20px; text-align:center")
+	button#zoom(type='button').btn.btn-info zoom
+						button(type='button').btn.btn-info grayscale
+						button(type='button').btn.btn-info contrast
+	section.crop(style="text-align:center; display:none")
+		br
+		input#crop_xval(type="text", placeholder="Width")
+		br
+		input#crop_yval(type="text", placeholder="height")
+		br
+		button(type="button").btn.btn-info Edit
+	br
+	br
+	section.zoom(style="text-align:center; display:none")
+		button(type='button').btn.btn-info +
+		button(type='button').btn.btn-info -

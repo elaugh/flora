@@ -6,3 +6,49 @@ body {
 a {
   color: #00B7FF;
 }
+.filters{
+	margin-bottom: 10px;
+	position: relative;
+	cursor: pointer;
+}
+.filters h1{
+	display: none;
+	position: absolute;
+	color: white;
+	text-shadow:1px 1px black;
+}
+.filters:hover h1{
+	display: block;
+}
+.img-holder{
+	display: inline-block;
+	/*padding: 15px;*/
+	background-color: grey;
+	width:650px;
+}
+.image{
+	width:650px;
+	height: 450px;
+	overflow: hidden;
+	border:10px solid #33333;
+}
+.span9{
+	position: fixed;
+	right:200px;
+	margin-top: -85px;
+}
+.span3{
+	position: absolute;
+}
+.row{
+	position: absolute;
+}
+.head{
+	margin-left: -100px;
+}
+.transformation{
+	padding-top: 10px;
+}
+.btn.btn-info{
+	float:left;
+}
